@@ -1,0 +1,25 @@
+.header{
+    min-width: 50vw;
+    margin: 10px 0;
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: cornflowerblue;
+    color: white;
+    border-radius: 10px;
+}
+
+.header>a {
+    text-decoration: none;
+    margin-left: 10px;
+    color: white;
+    font-size: 18px;
+    padding: 5px;
+}
+
+.header>a:hover{
+    font-size: 20px;
+    transition: font-size .5ms;
+    border-bottom: 2px white solid;
+}
