@@ -1,13 +1,18 @@
 import React, {FC} from 'react';
 import {IUser} from "../../types/IUser";
-// import styles from './UserComponent.module.css';
-import {Link} from "react-router-dom";
+import {useNavigate} from "react-router-dom";
+import styles from './UserComponent.module.css'
 
 type IProps = {
     user:IUser,
 }
 
 const UserComponent: FC<IProps> = ({user}) => {
+    const navigate = useNavigate();
+
+    const onClickPostsHandler = () => {
+            navigate(user.id.toString())
+    };
     return (
         <div>
             <div>
@@ -15,8 +20,13 @@ const UserComponent: FC<IProps> = ({user}) => {
                 <p>E-mail: {user.email}</p>
                 <p>Website: {user.website}</p>
 
-                <Link to={user.id.toString()}>posts-link</Link>
+                <button
+                    className={styles.userButton}
+                    onClick={() => onClickPostsHandler()}
+                >Posts
+                </button>
                 <hr/>
+
             </div>
 
         </div>

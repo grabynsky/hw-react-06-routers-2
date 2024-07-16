@@ -14,7 +14,7 @@ const UserPostsPage = () => {
             .then(value => {
                 setUserPosts(value.data)
             })
-    }, [userId]);
+    }, []);
 
     return (
         <div>
