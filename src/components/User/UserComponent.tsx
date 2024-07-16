@@ -22,7 +22,7 @@ const UserComponent: FC<IProps> = ({user}) => {
 
                 <button
                     className={styles.userButton}
-                    onClick={() => onClickPostsHandler()}
+                    onClick={onClickPostsHandler}
                 >Posts
                 </button>
                 <hr/>

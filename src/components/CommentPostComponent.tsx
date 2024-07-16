@@ -5,7 +5,7 @@ type IProps = {
     comments: IComment,
 }
 const CommentPostComponent: FC<IProps> = ({comments}) => {
-    console.log(comments)
+
     const {postId, id, name , body , email} = comments;
 
     return (
